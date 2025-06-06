@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Arkanon",
+        "categoria": "Épica",
+        "preco": 3000
+    },
+    {
+        "nome": "Lymara",
+        "categoria": "Épica",
+        "preco": 4000
+    },
+    {
+        "nome": "Kaelthar",
+        "categoria": "Comum",
+        "preco": 800
+    },
+    {
+        "nome": "Maldrik",
+        "categoria": "Rara",
+        "preco": 1500
+    },
+    {
+        "nome": "Drahven",
+        "categoria": "Comum",
+        "preco": 600
+    },
+    {
+        "nome": "Nyxsombra",
+        "categoria": "Comum",
+        "preco": 400
+    }
+]

@@ -29,23 +29,29 @@
             <option value="">Selecione uma carta</option>
             <option value="comum">Comum</option>
             <option value="rara">Rara</option>
-            <option value="epica">Épica</option>
+            <option value="épica">Épica</option>
           </select>
         </div>
         <div class="preco-cartas">
           <label for="preco">Preço Máximo (R$)</label>
-          <input type="number" min="0" oninput="filtrarPorPreco(this)" class="preco" placeholder="Ex: 100" />
+          <input
+            type="number"
+            min="0"
+            oninput="filtrarPorPreco(this)"
+            class="preco"
+            placeholder="Ex: 100"
+          />
         </div>
         <button class="btn-filtrar">Aplicar filtros</button>
       </div>
-      <ul class="cartas">
-        <li class="data" data-categoria="Epica" data-preco="3000"></li>
+      <ul id="lista-cartas" class="cartas">
+        <!-- gerado automaticamente -->
       </ul>
     </main>
     <footer class="rodape"></footer>
 
     <scripts>
-      <!-- <script src="./src/js/loader-personagens.js" defer></script> -->
+      <script src="./src/js/loader-produtos.js" defer></script>
       <script src="./src/js/index.js" defer></script>
     </scripts>
     <host>
