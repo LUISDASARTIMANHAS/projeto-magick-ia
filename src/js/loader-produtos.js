@@ -1,3 +1,4 @@
+import { renderAWa, renderButton, renderH2, renderPicture, renderSpan } from "./renders.js";
 window.addEventListener("load", () => {
   try {
     const url = "./src/data/lista-produtos.json";
@@ -35,7 +36,8 @@ window.addEventListener("load", () => {
 
     function render(data) {
       const ulProdutos = document.getElementById("lista-cartas");
-      // const UlpersonagensBotoes = document.getElementById("personagensBotoes");
+      // limpa tudo que estiver na ul
+      ulProdutos.innerHTML = "";
 
       for (let i = 0; i < data.length; i++) {
         const personagem = data[i];
@@ -68,12 +70,12 @@ window.addEventListener("load", () => {
 
       // parte do produto
       renderH2(divInformacoes, "nome-personagem", nome);
-      renderSpan(divInformacoes,"categoria", `Categoria: ${categ}`);
-      renderSpan(divInformacoes,"preco", `R$: ${preco}`);
-      renderButton(divInformacoes,"btn-comprar", "Comprar");
+      renderSpan(divInformacoes, "categoria", `Categoria: ${categ}`);
+      renderSpan(divInformacoes, "preco", `R$: ${preco}`);
+      renderAWa(divInformacoes, "btn-comprar","+5527995744791",`Olá, quero comprar a carta ${nome}`, "Comprar");
 
       // juntando os 2 em uma div
-      renderPicture(liProduto, srcSet, nome);
+      renderPicture(liProduto, srcSet, `Carta ${nome}`);
       liProduto.appendChild(divInformacoes);
 
       // juntando a div em uma lista de divs
@@ -82,57 +84,6 @@ window.addEventListener("load", () => {
         `%c [SISTEMA]: Carregando Produto: ${nome}`,
         "color: #00ccff"
       );
-    }
-
-    // funcoes basicas de renderização
-    function renderButton(element, classe, text) {
-      var button = document.createElement("button");
-      // configuracoes do span Categoria
-      button.setAttribute("class", classe);
-      button.textContent = text;
-      element.appendChild(button);
-    }
-
-    function renderSpan(element, classe, text) {
-      var span = document.createElement("span");
-      // configuracoes do span Categoria
-      span.setAttribute("class", classe);
-      span.textContent = text;
-      element.appendChild(span);
-    }
-
-    function renderH2(element, classe, nome) {
-      var h2 = document.createElement("h2");
-      // configuracoes do titulo h2
-      h2.setAttribute("class", classe);
-      h2.textContent = nome;
-      element.appendChild(h2);
-      return h2;
-    }
-
-    function renderIMG(picture, src, nome) {
-      var img = document.createElement("img");
-      img.setAttribute("src", src);
-      img.setAttribute("alt", `Carta ${nome}`);
-      picture.appendChild(img);
-      return img;
-    }
-
-    function renderSource(picture, srcSet, minWidth) {
-      // configuracoes de source
-      var source = document.createElement("source");
-      source.setAttribute("srcset", srcSet);
-      source.setAttribute("media", `(min-width: ${minWidth}px)`);
-      picture.appendChild(source);
-      return source;
-    }
-
-    function renderPicture(element, srcSet, nome) {
-      var picture = document.createElement("picture");
-      renderSource(picture, srcSet, 768);
-      renderIMG(picture, srcSet, nome);
-      element.appendChild(picture);
-      return picture;
     }
   } catch (error) {
     alert("ERRO FATAL! REPORTE AO ADMINISTRADOR DO SITE. \n Error:" + error);

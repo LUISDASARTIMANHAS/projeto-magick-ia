@@ -23,7 +23,7 @@
     <main class="container">
       <h1 class="produtos">Produtos</h1>
       <div class="filtros">
-        <div class="categorias-cargas">
+        <div class="categorias-cartas">
           <label for="categoria">Categoria</label>
           <select class="categoria" onselect="filtrar(this)">
             <option value="">Selecione uma carta</option>
@@ -45,13 +45,16 @@
         <button class="btn-filtrar">Aplicar filtros</button>
       </div>
       <ul id="lista-cartas" class="cartas">
+          <li class="load rgb"></li>
         <!-- gerado automaticamente -->
       </ul>
     </main>
-    <footer class="rodape"></footer>
+    <footer class="rodape">
+      ₢Todos os Direitos Reservados <script>document.write(new Date().getFullYear())</script>
+    </footer>
 
     <scripts>
-      <script src="./src/js/loader-produtos.js" defer></script>
+      <script src="./src/js/loader-produtos.js" type="module" defer></script>
       <script src="./src/js/index.js" defer></script>
     </scripts>
     <host>
