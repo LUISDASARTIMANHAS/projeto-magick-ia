@@ -47,9 +47,12 @@ window.addEventListener("load", () => {
 
         // criando elementos
         renderProdutos(ulProdutos, i, nome, preco, categ);
-        // renderBotoesPersonagem(nome, i, UlpersonagensBotoes);
       }
-      window.onloadedPersonagensEBotoes();
+      console.log(
+        `%c [SISTEMA]: Todos os produtos foram carregados!`,
+        "color: #00cc00"
+      );
+      window.onloadProdutos();
     }
 
     function renderProdutos(ulProdutos, i, nome, preco, categ) {

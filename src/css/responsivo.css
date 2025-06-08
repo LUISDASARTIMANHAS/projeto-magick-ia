@@ -1,66 +1,46 @@
-@media(max-width: 768px){
-    main::after{
-        width: 100vw;
-        background: linear-gradient(0deg, #000 45%, rgba(0, 0, 0, 0) 70%) no-repeat;
-    }
-    main .personagem .imagem{
-        height: 85%;
-        object-position: center;
+@media(max-width: 1024px) {
+    .container {
+        padding: 20px;
     }
 
-    .conteudo{
-        justify-content: flex-end;
-        left: 0;
-        top: -20%;
-        max-width: 100vw;
-        padding: 30px;
+    .container h1 {
+        text-align: center;
     }
 
-    .conteudo .nome-personagem{
-        font-size: 30px;
+    .container .filtros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
-    .conteudo .descricao{
-        max-width: 500px;
+    .container .filtros .categorias-cartas,
+    .container .filtros .preco-cartas,
+    .container .filtros .btn-filtrar {
+        width: 65%;
     }
 
-    .botoes{
-        flex-direction: row;
-        align-items: flex-end;
-        width: 100%;
-        padding: 30px;
+    .container .filtros .btn-filtrar {
+        align-self: center;
     }
 
-    .botoes .botao{
-        width: 70px;
-        height: 70px;
-    }
-
-    .botoes .botao img{
-        max-width: 70px;
+    .container .cartas{
+        justify-content: center;
     }
 }
 
-@media(max-width: 425px){
-    main .personagem .imagem{
-        height: auto;
+@media(max-width: 480px) {
+    .container .filtros .categorias-cartas,
+    .container .filtros .preco-cartas,
+    .container .filtros .btn-filtrar {
+        width: 100%;
     }
 
-    .conteudo{
-        top: -20%;
+    .container .filtros .btn-filtrar {
+        align-self: center;
     }
 
-    .botoes{
-        padding: 20px;
-        top: -10%;
-    }
-
-    .botoes .botao{
-        width: 50px;
-        height: 50px;
-    }
-
-    .botoes .botao img{
-        max-width: 50px;
+    .container .cartas{
+        justify-content: center;
     }
 }

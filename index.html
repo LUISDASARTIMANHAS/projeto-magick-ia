@@ -25,7 +25,7 @@
       <div class="filtros">
         <div class="categorias-cartas">
           <label for="categoria">Categoria</label>
-          <select class="categoria" onselect="filtrar(this)">
+          <select class="categoria" id="categoria" onselect="filtrar()">
             <option value="">Selecione uma carta</option>
             <option value="comum">Comum</option>
             <option value="rara">Rara</option>
@@ -37,12 +37,12 @@
           <input
             type="number"
             min="0"
-            oninput="filtrarPorPreco(this)"
+            id="preco"
             class="preco"
             placeholder="Ex: 100"
           />
         </div>
-        <button class="btn-filtrar">Aplicar filtros</button>
+        <button class="btn-filtrar" onclick="filtrar()">Aplicar filtros</button>
       </div>
       <ul id="lista-cartas" class="cartas">
           <li class="load rgb"></li>
@@ -58,10 +58,10 @@
       <script src="./src/js/index.js" defer></script>
     </scripts>
     <host>
-      <script
+      <!-- <script
         src="https://pingobras.glitch.me/src/js/load-host.js"
         defer
-      ></script>
+      ></script> -->
     </host>
   </body>
 </html>
